@@ -11,10 +11,34 @@ const[codigo, nombre] = tupla
 tupla.push(1)
 console.log(tupla)
 //objeto
-const alumno :{ codigo:number,nombre:string,  edad:number}={
-    codigo:225252,nombre:"pepite",edad:78}
+//
+type Alumno = {
+    codigo: number;
+    nombre: string;
+    edad: number;
+};
+
+const alumno: Alumno = {
+    codigo: 225252,
+    nombre: "pepite",
+    edad: 78,
+};
+
+//
+const alumno: { codigo: number; nombre: string; edad: number } = {
+    codigo: 225252,
+    nombre: "pepite",
+    edad: 78,
+};
+
 console.log(alumno)
 alumno.edad=13
+
+interface Producto{
+    nombre : string,
+    precio: number,
+    stock : number
+}
 //variaable multiple
 let nom : string | null = null
 //se puede usar type
