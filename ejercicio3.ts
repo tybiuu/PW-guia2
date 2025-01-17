@@ -4,8 +4,13 @@ interface Producto{
     stock : number
 }
 export const aplicarDescuento =(productos :Producto[],num : number)=>{
+    const respuesta : Producto[] =[]
     for(let producto of productos){
-        producto.precio =producto.precio*(1-num/100) 
+        respuesta.push({
+            nombre: producto.nombre,
+            precio: producto.precio * (1 - num / 100),
+            stock: producto.stock
+        });
     }
     return productos
 }
