@@ -1,6 +1,7 @@
 import { filtrarNumerosMayores,calcularPromedio } from "./ejercicio1"
 import { distanciaEntrePuntos, Punto,moverPunto} from "./ejercicio2"
 import { aplicarDescuento,filtrarPorStock } from "./ejercicio3"
+import { mapearNombres,calcularEdadPromedio,filtrarUsuariosMayores } from "./ejercicio4"
 
 const main = ()=>{
     //ejerc1
@@ -24,5 +25,14 @@ const main = ()=>{
         ];
     console.log(aplicarDescuento(productos, 10));
     console.log(filtrarPorStock(productos, 50));
+    //ejer4
+    const usuarios = [
+        { id: 1, nombre: "Ana", edad: 25 },
+        { id: 2, nombre: "Luis", edad: 30 },
+        { id: 3, nombre: "María", edad: 22 }
+        ];
+    console.log(mapearNombres(usuarios));
+    console.log(calcularEdadPromedio(usuarios));
+    console.log(filtrarUsuariosMayores(usuarios, 25));
 }
 main()
